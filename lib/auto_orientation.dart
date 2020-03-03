@@ -1,3 +1,7 @@
+import 'dart:html';
+import 'dart:io';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 
 // Class that provides different modes
@@ -7,7 +11,7 @@ class AutoOrientation {
 
   // rotate the device to landscape left mode
   static landscapeLeftMode() async {
-    SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeLeft]);
+//    SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeLeft]);
     try {
       await _channel.invokeMethod('setLandscapeLeft');
     } on MissingPluginException catch (_) {
@@ -17,7 +21,7 @@ class AutoOrientation {
 
   // rotate the device to landscape right mode
   static landscapeRightMode() async {
-    SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeRight]);
+//    SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeRight]);
     try {
       await _channel.invokeMethod('setLandscapeRight');
     } on MissingPluginException catch (_) {
